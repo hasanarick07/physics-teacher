@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import CustomLink from "../CustomLink/CustomLink";
 import { MenuIcon } from "@heroicons/react/solid";
 import logo from "../../../images/image.jpg";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [user] = useAuthState(auth);
   return (
     <div className="overflow-auto sticky top-0">
       <nav className="p-3 bg-green-800 text-white mb-7">
@@ -47,12 +50,21 @@ const Header = () => {
             >
               About Me
             </CustomLink>
-            <CustomLink
-              className="mr-2  md:mr-7 text-xs md:text-base"
-              to="/login"
-            >
-              Log In
-            </CustomLink>
+            {user ? (
+              <CustomLink
+                className="mr-2  md:mr-7 text-xs md:text-base"
+                to="/signOut"
+              >
+                Log Out
+              </CustomLink>
+            ) : (
+              <CustomLink
+                className="mr-2  md:mr-7 text-xs md:text-base"
+                to="/login"
+              >
+                Log In
+              </CustomLink>
+            )}
           </div>
         </div>
       </nav>
