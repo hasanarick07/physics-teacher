@@ -6,37 +6,51 @@ import logo from "../../../images/image.jpg";
 const Header = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="mb-7">
-      <nav className="p-3 bg-green-800 text-white">
-        <div onClick={() => setOpen(!open)} className="w-6 md:hidden">
+    <div className="overflow-auto sticky top-0">
+      <nav className="p-3 bg-green-800 text-white mb-7">
+        <div onClick={() => setOpen(!open)} className="w-6 ml-auto md:hidden">
           <MenuIcon></MenuIcon>
         </div>
         <div className={"flex items-center justify-between"}>
           <div className="flex items-center">
             <img className="h-12 md:ml-10 " src={logo} alt="" />
-            <span className="ml-2 md:text-2xl">Physics Teacher</span>
+            <span className="ml-2 md:text-2xl p-1 inline-block rounded-br-3xl border-b-4">
+              Physics Teacher
+            </span>
           </div>
           <div
             className={`flex md:static transition duration-500 ease-in-out absolute md:justify-center ${
               open ? "top-2" : "top-[-120px]"
-            } ${open ? "left-10" : "top-[-120px]"}`}
+            } ${open ? "right-10" : "top-[-120px]"}`}
           >
             <CustomLink
-              className="md:mr-7 text-white text-xs md:text-base"
+              className="mr-2 md:mr-7 text-white text-xs md:text-base"
               to="/home"
             >
               HOME
             </CustomLink>
-            <CustomLink className="md:mr-7 text-xs md:text-base" to="/pricing">
+            <CustomLink
+              className="mr-2 md:mr-7 text-xs md:text-base"
+              to="/pricing"
+            >
               Pricing
             </CustomLink>
-            <CustomLink className="md:mr-7 text-xs md:text-base" to="/blogs">
+            <CustomLink
+              className="mr-2 md:mr-7 text-xs md:text-base"
+              to="/blogs"
+            >
               Blogs
             </CustomLink>
-            <CustomLink className="md:mr-7 text-xs md:text-base" to="/about">
+            <CustomLink
+              className="mr-2 md:mr-7 text-xs md:text-base"
+              to="/about"
+            >
               About Me
             </CustomLink>
-            <CustomLink className=" md:mr-7 text-xs md:text-base" to="/login">
+            <CustomLink
+              className="mr-2  md:mr-7 text-xs md:text-base"
+              to="/login"
+            >
               Log In
             </CustomLink>
           </div>
