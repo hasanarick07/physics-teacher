@@ -12,8 +12,11 @@ function CustomLink({ children, to, ...props }) {
           color: match ? "black" : "white",
           fontWeight: match ? 700 : "",
           padding: 7,
-          textDecorationLine: "underline",
-          textUnderlinePosition: "under",
+          borderBottom: 2,
+          borderBottomColor: match ? "black" : "white",
+          borderBottomStyle: "solid",
+          borderBottomLeftRadius: 3,
+          borderBottomRightRadius: 10,
           marginBottom: 100,
         }}
         to={to}

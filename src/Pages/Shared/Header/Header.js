@@ -6,15 +6,15 @@ import logo from "../../../images/image.jpg";
 const Header = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div>
-      <nav className="p-3 bg-green-700 text-white">
+    <div className="mb-7">
+      <nav className="p-3 bg-green-800 text-white">
         <div onClick={() => setOpen(!open)} className="w-6 md:hidden">
           <MenuIcon></MenuIcon>
         </div>
         <div className={"flex items-center justify-between"}>
           <div className="flex items-center">
             <img className="h-12 md:ml-10 " src={logo} alt="" />
-            <span className="ml-2">Physics Teacher</span>
+            <span className="ml-2 md:text-2xl">Physics Teacher</span>
           </div>
           <div
             className={`flex md:static transition duration-500 ease-in-out absolute md:justify-center ${
