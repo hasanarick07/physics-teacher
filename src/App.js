@@ -9,6 +9,7 @@ import Register from "./Pages/Register/Register";
 import SignOut from "./Pages/SignOut/SignOut";
 import Checkout from "./Pages/Checkout/Checkout";
 import RequireAuth from "./Pages/RequireAuth/RequireAuth";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
       <Footer></Footer>
     </div>

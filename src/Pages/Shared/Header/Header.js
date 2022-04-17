@@ -4,20 +4,33 @@ import { MenuIcon } from "@heroicons/react/solid";
 import logo from "../../../images/image.jpg";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [user] = useAuthState(auth);
+  const navigate = useNavigate();
+  const navigateToHome = () => {
+    navigate("/");
+  };
   return (
     <div className="overflow-auto sticky top-0">
-      <nav className="p-3 bg-green-800 text-white mb-7">
+      <nav className="p-3 bg-green-800 text-white">
         <div onClick={() => setOpen(!open)} className="w-6 ml-auto md:hidden">
           <MenuIcon></MenuIcon>
         </div>
         <div className={"flex items-center justify-between"}>
           <div className="flex items-center">
-            <img className="h-12 md:ml-10 " src={logo} alt="" />
-            <span className="ml-2 md:text-2xl p-1 inline-block rounded-br-3xl border-b-4">
+            <img
+              onClick={navigateToHome}
+              className="h-12 md:ml-10 "
+              src={logo}
+              alt=""
+            />
+            <span
+              onClick={navigateToHome}
+              className="ml-2 md:text-2xl p-1 inline-block rounded-br-3xl border-b-4"
+            >
               Physics Teacher
             </span>
           </div>
@@ -50,6 +63,16 @@ const Header = () => {
             >
               About Me
             </CustomLink>
+            {user ? (
+              ""
+            ) : (
+              <CustomLink
+                className="mr-2 md:mr-7 text-xs md:text-base"
+                to="/register"
+              >
+                Register
+              </CustomLink>
+            )}
             {user ? (
               <CustomLink
                 className="mr-2  md:mr-7 text-xs md:text-base"
