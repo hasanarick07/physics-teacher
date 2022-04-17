@@ -7,6 +7,8 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import Login from "./Pages/LogIn/Login";
 import Register from "./Pages/Register/Register";
 import SignOut from "./Pages/SignOut/SignOut";
+import Checkout from "./Pages/Checkout/Checkout";
+import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 
 function App() {
   return (
@@ -21,6 +23,14 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/signOut" element={<SignOut></SignOut>}></Route>
+        <Route
+          path="/checkout"
+          element={
+            <RequireAuth>
+              <Checkout></Checkout>
+            </RequireAuth>
+          }
+        ></Route>
       </Routes>
       <Footer></Footer>
     </div>
