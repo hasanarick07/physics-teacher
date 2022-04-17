@@ -4,10 +4,10 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-7 p-7">
-      <p>
+    <footer className="mt-7 text-white text-xl p-7">
+      <h4>
         <small>Copywrite © {year} By Arick</small>
-      </p>
+      </h4>
     </footer>
   );
 };

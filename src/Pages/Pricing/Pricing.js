@@ -10,9 +10,9 @@ const Pricing = () => {
   }, []);
   return (
     <div className="overflow-hidden	">
-      <h1 className="p-3 inline-block rounded-br-3xl border-b-4 text-4xl font-semibold	mb-3 text-gray-100">
+      <h2 className="p-3 inline-block rounded-br-3xl border-b-4 text-4xl font-semibold	mb-3 text-gray-100">
         Tuition Packages
-      </h1>
+      </h2>
       <div className="grid md:grid-cols-3 gap-4 overflow-hidden">
         {price.map(price => (
           <Price key={price.id} price={price}></Price>
