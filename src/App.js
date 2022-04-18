@@ -15,7 +15,7 @@ import About from "./Pages/About/About";
 
 function App() {
   return (
-    <div className="App bg-gray-600">
+    <div className="App bg-gray-500">
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>

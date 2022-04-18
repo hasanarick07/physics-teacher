@@ -15,7 +15,7 @@ const Header = () => {
   };
   return (
     <div className="sticky top-0 z-auto">
-      <nav className="p-3 bg-gray-600 text-white">
+      <nav className="p-3 bg-gray-500 text-white">
         <div onClick={() => setOpen(!open)} className="w-6 ml-auto md:hidden">
           <MenuIcon></MenuIcon>
         </div>

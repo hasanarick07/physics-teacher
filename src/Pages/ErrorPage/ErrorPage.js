@@ -40,7 +40,7 @@ const ErrorPage = () => {
           </h4>
           <button
             onClick={goBackButton}
-            className="w-full lg:w-auto my-4 border text-lg hover:font-bold rounded-full px-1 sm:px-16 py-5 bg-white text-green-700 hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-opacity-50"
+            className="w-full lg:w-auto my-4 border text-lg hover:font-bold rounded-full px-1 sm:px-16 py-5 bg-white text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-opacity-50"
           >
             Go back to Homepage
           </button>
