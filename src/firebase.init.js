@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD8W-ZKVas0Y60DfiBMkSwzUz_q2Wa2soU",
-  authDomain: "physics-teacher-e7cf0.firebaseapp.com",
-  projectId: "physics-teacher-e7cf0",
-  storageBucket: "physics-teacher-e7cf0.appspot.com",
-  messagingSenderId: "247614374757",
-  appId: "1:247614374757:web:02f747e8e037a29c41178c",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

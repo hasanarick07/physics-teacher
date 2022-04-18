@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../Form/Form.css";
 
 export default function Form() {
@@ -26,6 +27,12 @@ export default function Form() {
           type="text"
           {...register("Last name", { required: true, maxLength: 100 })}
         />
+        <label>Address</label>
+        <input
+          className="dark:bg-blue-200 bg-blue-100"
+          type="text"
+          {...register("Last name", { required: true, maxLength: 300 })}
+        />
         <label>Email</label>
         <input
           className="dark:bg-blue-200 bg-blue-100"
@@ -47,10 +54,12 @@ export default function Form() {
           })}
         />
         <input
+          onClick={() => toast("Thank you for your interest")}
           className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-md w-full mt-5 md:px-36 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-700"
           type="submit"
         />
       </form>
+      <ToastContainer />
     </div>
   );
 }

@@ -16,9 +16,10 @@ const Register = () => {
   const registerEmail = useRef("");
   const registerPassword = useRef("");
   if (user) {
-    console.log(user);
+    // console.log(user);
     navigate("/home");
   }
+
   if (error) {
     toast(error?.message);
   }

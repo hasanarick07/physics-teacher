@@ -25,10 +25,11 @@ const Login = () => {
   if (user) {
     navigate(from, { replace: true });
   }
+
   if (loading || sending) {
     <Loading></Loading>;
   }
-  const logFormSubmit = e => {
+  const loginFormSubmit = e => {
     e.preventDefault();
     const emailVerify = /\S+@\S+\.\S+/;
     const verifiedEmail = emailVerify.test(logEmail.current.value);
@@ -66,7 +67,7 @@ const Login = () => {
       <div className="block md:flex border-2 rounded-md w-fit m-auto text-white p-4">
         <div className="md:p-7">
           <h2 className="text-4xl  text-white"> Log In...</h2>
-          <form onSubmit={logFormSubmit} className="w-fit m-auto">
+          <form onSubmit={loginFormSubmit} className="w-fit m-auto">
             <div className="my-3">
               <label className="block mb-2 text-left text-m font-medium text-white">
                 Email
