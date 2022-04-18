@@ -132,8 +132,8 @@ const Login = () => {
             <div className="mt-2">
               New to Physics Teacher?
               <Link
-                className="text-white ml-3 hover:text-green-900
-                 hover:border-green-900 hover:text-md rounded-br-2xl
+                className="text-white ml-3 hover:text-gray-900
+                 hover:border-gray-900 hover:text-md rounded-br-2xl
                   border-b-2 pr-2 pb-1"
                 to="/register"
               >
@@ -142,8 +142,8 @@ const Login = () => {
             </div>
             <div
               onClick={emailReset}
-              className="mt-3 mr-auto inline-block text-left text-white  hover:text-green-900
-                 hover:border-green-900 hover:text-md rounded-br-2xl
+              className="mt-3 mr-auto inline-block text-left text-white  hover:text-gray-900
+                 hover:border-gray-900 hover:text-md rounded-br-2xl
                   border-b-2 pr-2 pb-1"
             >
               Forget Password?

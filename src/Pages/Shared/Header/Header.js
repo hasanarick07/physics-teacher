@@ -15,7 +15,7 @@ const Header = () => {
   };
   return (
     <div className="sticky top-0 z-auto">
-      <nav className="p-3 bg-green-800 text-white">
+      <nav className="p-3 bg-gray-600 text-white">
         <div onClick={() => setOpen(!open)} className="w-6 ml-auto md:hidden">
           <MenuIcon></MenuIcon>
         </div>
@@ -35,8 +35,8 @@ const Header = () => {
             </span>
           </div>
           <div
-            className={`flex md:static transition duration-500 ease-in-out absolute md:justify-center ${
-              open ? "top-2" : "top-[-120px]"
+            className={`grid grid-cols-3 gap-2 md:flex md:static transition duration-500 ease-in-out absolute md:justify-center ${
+              open ? "top-0" : "top-[-120px]"
             } ${open ? "right-10" : "top-[-120px]"}`}
           >
             <CustomLink

@@ -160,7 +160,7 @@ const Register = () => {
             <div className="my-2 text-white">
               Already have an account?
               <Link
-                className="text-white ml-3 hover:text-green-900 hover:border-green-900 hover:text-md rounded-br-2xl border-b-2 pr-2 pb-1"
+                className="text-white ml-3 hover:text-gray-900 hover:border-gray-900 hover:text-md rounded-br-2xl border-b-2 pr-2 pb-1"
                 to="/LogIn"
               >
                 Log In
@@ -170,7 +170,7 @@ const Register = () => {
         </div>
         <div className="flex md:block justify-center items-center my-3">
           <hr className="h-1 md:h-1/2 md:w-1 w-1/2 md:ml-4 bg-amber-300 border-2 border-amber-400" />
-          <h2 className="mx-2">OR</h2>
+          <h2 className="mx-2 text-white">OR</h2>
           <hr className="h-1 md:h-1/2 md:w-1 w-1/2 md:ml-4 bg-amber-300 border-2 border-amber-400" />
         </div>
         <ContinueWithGGF></ContinueWithGGF>
