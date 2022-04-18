@@ -9,11 +9,11 @@ const Pricing = () => {
       .then(data => setPrice(data));
   }, []);
   return (
-    <div className="overflow-hidden	">
+    <div className="">
       <h2 className="p-3 inline-block rounded-br-3xl border-b-4 text-4xl font-semibold	mb-3 text-gray-100">
         Tuition Packages
       </h2>
-      <div className="grid md:grid-cols-3 gap-4 overflow-hidden">
+      <div className="grid md:grid-cols-3 gap-4">
         {price.map(price => (
           <Price key={price.id} price={price}></Price>
         ))}

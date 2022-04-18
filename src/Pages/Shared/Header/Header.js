@@ -14,7 +14,7 @@ const Header = () => {
     navigate("/");
   };
   return (
-    <div className="overflow-auto sticky top-0">
+    <div className="sticky top-0 z-auto">
       <nav className="p-3 bg-green-800 text-white">
         <div onClick={() => setOpen(!open)} className="w-6 ml-auto md:hidden">
           <MenuIcon></MenuIcon>
@@ -23,13 +23,13 @@ const Header = () => {
           <div className="flex items-center">
             <img
               onClick={navigateToHome}
-              className="h-12 md:ml-10 "
+              className="h-12 md:ml-10 rounded-full"
               src={logo}
               alt=""
             />
             <span
               onClick={navigateToHome}
-              className="ml-2 md:text-2xl p-1 inline-block rounded-br-3xl border-b-4"
+              className="ml-2 md:text-2xl pb-1 pr-3 inline-block rounded-br-3xl border-b-4"
             >
               Physics Teacher
             </span>

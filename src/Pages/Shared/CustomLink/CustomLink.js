@@ -15,7 +15,7 @@ function CustomLink({ children, to, ...props }) {
           borderBottom: 2,
           borderBottomColor: match ? "black" : "white",
           borderBottomStyle: "solid",
-          borderBottomLeftRadius: [-20],
+          borderBottomLeftRadius: match ? 10 : 0,
           borderBottomRightRadius: 10,
           marginBottom: 100,
         }}

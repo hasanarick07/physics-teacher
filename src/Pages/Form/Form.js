@@ -16,19 +16,19 @@ export default function Form() {
       <form className="w-1/2" onSubmit={handleSubmit(onSubmit)}>
         <label>First name</label>
         <input
-          className="dark:bg-blue-300 bg-blue-50"
+          className="dark:bg-blue-200 bg-blue-100"
           type="text"
           {...register("First name", { required: true, maxLength: 80 })}
         />
         <label>Last name</label>
         <input
-          className="dark:bg-blue-300 bg-blue-50"
+          className="dark:bg-blue-200 bg-blue-100"
           type="text"
           {...register("Last name", { required: true, maxLength: 100 })}
         />
         <label>Email</label>
         <input
-          className="dark:bg-blue-300 bg-blue-50"
+          className="dark:bg-blue-200 bg-blue-100"
           type="text"
           {...register("Email", {
             required: true,
@@ -38,7 +38,7 @@ export default function Form() {
         />
         <label>Mobile number</label>
         <input
-          className="dark:bg-blue-300 bg-blue-50"
+          className="dark:bg-blue-200 bg-blue-100"
           type="tel"
           {...register("Mobile number", {
             required: true,
